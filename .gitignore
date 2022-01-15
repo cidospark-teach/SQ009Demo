@@ -1,0 +1,5 @@
+Bin
+Obj
+.vs/
+.DS_Store
+*.db
