@@ -21,6 +21,6 @@ jobs:
       run: |
         docker build -t sq009_demo .
         docker tag sq009_demo registry.heroku.com/$APP_NAME/web
-        docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
+        heroku login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
         heroku container:push web -a $APP_NAME
         heroku container:release web -a $APP_NAME
